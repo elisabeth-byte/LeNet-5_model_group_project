@@ -71,7 +71,7 @@ train_accuracies = []
 val_accuracies = []
 
 # number of epochs
-num_epochs = 3  0
+num_epochs = 30
 for epoch in range(num_epochs):
     model.train()
     running_loss = 0.0
