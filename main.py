@@ -85,10 +85,7 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
         running_loss += loss.item()
-        ''' torch.max(outputs, 1): The torch.max() function returns the maximum
-        value of all elements in the tensor along a specified dimension.
-         (_) is used for variables that we don't need to use   '''
-        _, predicted = torch.max(outputs, 1)
+        _, predicted = torch.max(outputs, 1)                                         # torch.max(outputs, 1): The torch.max() function returns the maximum value of all elements in the tensor along a specified dimension.(_) is used for variables that we don't need to use
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
     train_loss = running_loss / len(train_loader)
